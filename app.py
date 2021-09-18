@@ -4,12 +4,10 @@ from flask import Flask, request, jsonify, render_template
 from transformers import PegasusForConditionalGeneration, PegasusTokenizer
 
 def generate_summary(text):
-
     # Create tokenizer
     tokenizer = PegasusTokenizer.from_pretrained("google/pegasus-xsum")
     # load pretrained model
     model = PegasusForConditionalGeneration.from_pretrained("google/pegasus-xsum")
-
     # convert into tokens (number representation of text)   
     tokens = tokenizer(text, truncation=True, padding="longest", return_tensors="pt")
     summary = model.generate(**tokens)
