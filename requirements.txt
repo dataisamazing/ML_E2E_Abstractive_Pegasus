@@ -11,6 +11,5 @@ matplotlib>=1.4.3
 pandas>=0.19
 nltk>=3.4.5
 regex>=2.5.82
-networkx==2.3
 transformers==4.10.2
 clean-text==0.5.0
