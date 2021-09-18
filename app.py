@@ -1,16 +1,7 @@
-#from nltk.corpus import stopwords
 import numpy as np
-#import networkx as nx
 import regex
 from flask import Flask, request, jsonify, render_template
 from transformers import PegasusForConditionalGeneration, PegasusTokenizer
-
-#import nltk
-#import textwrap
-
-#pip install transformers
-
-
 
 def generate_summary(text):
 
