@@ -29,7 +29,7 @@ app = Flask(__name__)
 def original_text_form():
 		text = request.form['input_text']
 		summary = generate_summary(text)
-		return render_template('index1.html', title = "Summarizer", original_text = text, output_summary = summary, num_sentences = 5)
+		return render_template('index1.html', title = "Summarizer", original_text = text, output_summary = summary)
 
 @app.route('/')
 def homepage():
